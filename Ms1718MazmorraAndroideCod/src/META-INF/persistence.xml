@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="Ms1718MazmorraAndroide" transaction-type="RESOURCE_LOCAL">
+	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>negocio.departamento.Departamento</class>
+		<class>negocio.actividad.Actividad</class>
+		<class>negocio.empleado.AsignacionActividad</class>
+		<class>negocio.empleado.Empleado</class>
+		<class>negocio.empleado.EmpleadoFijo</class>
+		<class>negocio.empleado.EmpleadoTemporal</class>
+		
+		<properties>
+      	
+      		<property name="eclipselink.cache.shared.default" value="false"/>
+            
+        	   <property name="javax.persistence.jdbc.driver"
+value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url"
+value="jdbc:mysql://localhost:3306/mazmorra"/>  
+
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value=""/>
+			<!-- enable this property to see SQL and other logging -->
+			<!-- property name="eclipselink.logging.level" value="FINE"/ -->
+		
+		<!--   	<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+			<property name="eclipselink.create-ddl-jdbc-file-name"
+value="createDDL_ddlGeneration.jdbc"/>
+			<property name="eclipselink.drop-ddl-jdbc-file-name"
+value="dropDDL_ddlGeneration.jdbc"/>
+			<property name="eclipselink.ddl-generation.output-mode"
+value="both"/>  -->
+		
+    </properties>
+	</persistence-unit>
+</persistence>
